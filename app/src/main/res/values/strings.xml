@@ -2,5 +2,7 @@
     <string name="app_name">PokeDex</string>
     <string name="title">BIENVENIDO A LA POKEDEX!</string>
     <string name="name_search">Ingresa el nombre de tu pokemon</string>
+    <string name="kanto">Kanto</string>
+    <string name="SubTitle">Selecciona la región de tu pokemon</string>
 
 </resources>
