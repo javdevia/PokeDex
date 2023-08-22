@@ -10,3 +10,11 @@ data class PokemonDataResponse(
     @SerializedName("name") val pokemonName: String,
     @SerializedName("url") val pokemonUrl: String
 )
+
+data class PokemonDetailResponse(
+    @SerializedName ("sprites") val pokemonSprites: List<pokemonImageResponse>
+)
+
+data class pokemonImageResponse (
+    @SerializedName ("front_default") val pokemonImageUrl: String
+)

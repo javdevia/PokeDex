@@ -1,5 +1,7 @@
 package com.project.pokedex
 
+import android.content.Intent
+import android.nfc.NfcAdapter.EXTRA_ID
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
@@ -12,6 +14,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ListActivity : AppCompatActivity() {
+
+    companion object {
+        const val EXTRA_NAME = "extra_name"
+    }
 
     private lateinit var binding: ActivityListBinding
     private lateinit var retrofit: Retrofit
@@ -29,10 +35,11 @@ class ListActivity : AppCompatActivity() {
         searchRegion()
 
         // Inicialización de RecyclerView
-        adapter = PokemonListAdapter()
+        adapter = PokemonListAdapter { navigateToDetail(it) }
         binding.rvPokemonList.setHasFixedSize(true)
         binding.rvPokemonList.layoutManager = LinearLayoutManager(this)
         binding.rvPokemonList.adapter = adapter
+
     }
 
     private fun searchRegion() {
@@ -58,5 +65,11 @@ class ListActivity : AppCompatActivity() {
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    private fun navigateToDetail(id:String) {
+        val intent = Intent(this, PokemonDetailActivity::class.java)
+        intent.putExtra(EXTRA_NAME, id)
+        startActivity(intent)
     }
 }

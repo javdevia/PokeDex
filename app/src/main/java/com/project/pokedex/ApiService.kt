@@ -10,6 +10,6 @@ interface ApiService {
     @GET("pokemon")
     suspend fun searchPokemonList(@Query("limit") limit: Int): Response <PokemonListDataResponse>
 
-    // @GET("pokemon/{name}")
-    // suspend fun searchPokemon(@Path("name") pokemonName: String): Response<PokemonDataResponse>
+    @GET("pokemon/{name}")
+    suspend fun searchPokemonDetail(@Path("name") pokemonName: String): Response<PokemonDataResponse>
 }

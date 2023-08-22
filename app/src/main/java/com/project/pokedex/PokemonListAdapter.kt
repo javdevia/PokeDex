@@ -5,10 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class PokemonListAdapter(
-    var pokemonList: List<PokemonDataResponse> = emptyList()) :
-    RecyclerView.Adapter<PokemonListViewHolder>(){
+    var pokemonList: List<PokemonDataResponse> = emptyList(),
+    private val onItemSelected: (String) -> Unit,
+) :
+    RecyclerView.Adapter<PokemonListViewHolder>() {
 
-    fun updateList(list:List<PokemonDataResponse>){
+    fun updateList(list: List<PokemonDataResponse>) {
         pokemonList = list
         notifyDataSetChanged()
     }
@@ -21,7 +23,7 @@ class PokemonListAdapter(
     override fun getItemCount() = pokemonList.size
 
     override fun onBindViewHolder(holder: PokemonListViewHolder, position: Int) {
-        holder.render(pokemonList[position])
+        holder.render(pokemonList[position], onItemSelected)
     }
 
 }
