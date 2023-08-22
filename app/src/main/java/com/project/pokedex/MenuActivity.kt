@@ -23,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun navigate() {
-        intent = Intent(this, MenuActivity::class.java)
+        intent = Intent(this, ListActivity::class.java)
         startActivity(intent)
     }
 

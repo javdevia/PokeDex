@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET("pokemon")
-    suspend fun searchPokemon(pokemonName: String): Response<PokemonDataResponse>
+    suspend fun searchPokemonList(@Query("limit") limit: Int): Response <PokemonListDataResponse>
 
     // @GET("pokemon/{name}")
     // suspend fun searchPokemon(@Path("name") pokemonName: String): Response<PokemonDataResponse>

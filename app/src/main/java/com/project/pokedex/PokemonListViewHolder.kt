@@ -9,8 +9,6 @@ class PokemonListViewHolder (view: View): RecyclerView.ViewHolder(view) {
     private val binding = ItemPokemonBinding.bind(view)
 
     fun render(pokemonDataResponse: PokemonDataResponse) {
-        binding.tvPokemonName.text =pokemonDataResponse.PokemonName
-        binding.tvPokemonId.text = pokemonDataResponse.pokemonId.toString()
-
+        binding.tvPokemonName.text =pokemonDataResponse.pokemonName
     }
 }
