@@ -4,6 +4,7 @@ import android.content.Intent
 import android.nfc.NfcAdapter.EXTRA_ID
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.pokedex.databinding.ActivityListBinding
@@ -63,13 +64,13 @@ class ListActivity : AppCompatActivity() {
         return Retrofit
             .Builder()
             .baseUrl("https://pokeapi.co/api/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
+           .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
-    private fun navigateToDetail(id:String) {
+    private fun navigateToDetail(name:String) {
         val intent = Intent(this, PokemonDetailActivity::class.java)
-        intent.putExtra(EXTRA_NAME, id)
+        intent.putExtra(EXTRA_NAME, name)
         startActivity(intent)
     }
 }
