@@ -1,4 +1,4 @@
-package com.project.pokedex
+package com.project.pokedex.API
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

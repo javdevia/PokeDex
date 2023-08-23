@@ -1,18 +1,15 @@
 package com.project.pokedex
 
 import android.content.Intent
-import android.nfc.NfcAdapter.EXTRA_ID
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.project.pokedex.API.ApiServiceManager
 import com.project.pokedex.databinding.ActivityListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class ListActivity : AppCompatActivity() {
 

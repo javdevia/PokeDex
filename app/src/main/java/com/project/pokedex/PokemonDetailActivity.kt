@@ -3,6 +3,8 @@ package com.project.pokedex
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
+import coil.load
+import com.project.pokedex.API.ApiServiceManager
 import com.project.pokedex.ListActivity.Companion.EXTRA_NAME
 import com.project.pokedex.databinding.ActivityPokemonDetailBinding
 import kotlinx.coroutines.CoroutineScope
@@ -34,13 +36,14 @@ class PokemonDetailActivity : AppCompatActivity() {
             if (response != null) {
                 runOnUiThread {
                     binding.tvPokemonName.text = response.pokemonName
+                    binding.ivPokemonDetail.load(response.pokemonSprites.pokemonImageUrl)
                     binding.progressBar.isVisible = false
                 }
             }
         }
     }
-
 }
+
 
 
 
