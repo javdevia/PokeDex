@@ -8,36 +8,27 @@ import com.project.pokedex.databinding.ActivityPokemonDetailBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 class PokemonDetailActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityPokemonDetailBinding
-    lateinit var retrofit: Retrofit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPokemonDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        retrofit = getRetrofit2()
         val pokemonName = intent.getStringExtra(EXTRA_NAME).orEmpty()
         searchDetail(pokemonName)
     }
 
-    private fun getRetrofit2(): Retrofit {
-        return Retrofit
-            .Builder()
-            .baseUrl("https://pokeapi.co/api/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-    private fun searchDetail(name:String) {
+
+    private fun searchDetail(name: String) {
         binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
-
+            val apiService = ApiServiceManager.apiService
             val myResponse =
-                retrofit.create(ApiService::class.java).searchPokemonDetail(name)
+                apiService.searchPokemonDetail(name)
             val response = myResponse.body()
 
             if (response != null) {

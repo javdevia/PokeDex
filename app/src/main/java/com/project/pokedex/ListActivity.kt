@@ -21,14 +21,12 @@ class ListActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityListBinding
-    private lateinit var retrofit: Retrofit
     private lateinit var adapter: PokemonListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        retrofit = getRetrofit()
         initUI()
     }
 
@@ -46,9 +44,9 @@ class ListActivity : AppCompatActivity() {
     private fun searchRegion() {
         binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
-
+            val apiService = ApiServiceManager.apiService
             val myResponse =
-                retrofit.create(ApiService::class.java).searchPokemonList(151)
+                apiService.searchPokemonList(151)
             val response = myResponse.body()
 
             if (response != null) {
@@ -60,15 +58,7 @@ class ListActivity : AppCompatActivity() {
         }
     }
 
-    private fun getRetrofit(): Retrofit {
-        return Retrofit
-            .Builder()
-            .baseUrl("https://pokeapi.co/api/v2/")
-           .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-    private fun navigateToDetail(name:String) {
+    private fun navigateToDetail(name: String) {
         val intent = Intent(this, PokemonDetailActivity::class.java)
         intent.putExtra(EXTRA_NAME, name)
         startActivity(intent)
