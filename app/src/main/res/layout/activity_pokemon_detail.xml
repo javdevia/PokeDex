@@ -24,12 +24,301 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
-        android:scaleType="centerCrop"
         android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPokemonName" />
+
+    <TextView
+        android:id="@+id/tvStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:textSize="20sp"
+        android:text="Base Stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPokemonDetail" />
+
+    <!-- Valor numerico de los stats -->
+    <LinearLayout
+        android:id="@+id/LayoutStatsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStats">
+
+        <TextView
+            android:id="@+id/tvValueHp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tvValueAttack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tvValueDefense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tvValueSpecialAttack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tvValueSpecialDefense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tvValueSpeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="50" />
+
+
+    </LinearLayout>
+
+    <!-- Gráfica de los Stats -->
+    <LinearLayout
+        android:id="@+id/LayoutGrafics"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginVertical="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutStatsValue">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseHp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvHp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseAttack"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAttack"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseDefense"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDefense"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseSpecialAttack"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSpecialAttack"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseSpecialDefense"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSpecialDefense"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBaseSpeed"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="true"
+            app:cardCornerRadius="16dp" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="1dp"
+                android:backgroundTint="@color/green"
+                app:cardCornerRadius="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <!-- Titulos de los Stats -->
+    <LinearLayout
+        android:id="@+id/LayoutStatsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutGrafics">
+
+        <TextView
+            android:id="@+id/tvHp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="HP"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvAttack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ATK"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvDefense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DEF"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvSpecialAttack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SP.ATK"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvSpecialDefense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SP.DEF"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvSpeed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SPD"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"

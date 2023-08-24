@@ -38,11 +38,26 @@ class PokemonDetailActivity : AppCompatActivity() {
                     binding.tvPokemonName.text = response.pokemonName
                     binding.ivPokemonDetail.load(response.pokemonSprites.pokemonImageUrl)
                     binding.progressBar.isVisible = false
+
+                    // Actualización del valor de los Stats en los TextView
+                    binding.tvValueHp.text = response.pokemonStats[0].pokemonStatValue.toString()
+                    binding.tvValueAttack.text = response.pokemonStats[1].pokemonStatValue.toString()
+                    binding.tvValueDefense.text = response.pokemonStats[2].pokemonStatValue.toString()
+                    binding.tvValueSpecialAttack.text = response.pokemonStats[3].pokemonStatValue.toString()
+                    binding.tvValueSpecialDefense.text = response.pokemonStats[4].pokemonStatValue.toString()
+                    binding.tvValueSpeed.text = response.pokemonStats[5].pokemonStatValue.toString()
+
+                    // Altura de los gráficos de Stats
+                    val heightHp: Double = response.pokemonStats[0].pokemonStatValue.toDouble()/255*248
+
+
                 }
+
             }
         }
     }
 }
+
 
 
 
