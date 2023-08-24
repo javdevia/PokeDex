@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nombre del Pokemon" />
 
-
     <TextView
         android:id="@+id/tvPokemonId"
         android:layout_width="wrap_content"
@@ -64,8 +63,8 @@
 
     <ImageView
         android:id="@+id/ivPokemonDetail"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
@@ -73,7 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LayoutDetail" />
-
 
     <TextView
         android:id="@+id/tvStats"
@@ -180,7 +178,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvHp"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
@@ -201,7 +199,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvAttack"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
@@ -222,7 +220,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvDefense"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
@@ -243,7 +241,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpecialAttack"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
@@ -264,7 +262,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpecialDefense"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
@@ -285,7 +283,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpeed"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="1dp"
                 android:backgroundTint="@color/green"
