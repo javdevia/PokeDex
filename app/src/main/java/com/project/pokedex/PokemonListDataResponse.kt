@@ -12,9 +12,13 @@ data class PokemonDataResponse(
 )
 
 data class PokemonDetailResponse(
+    @SerializedName ("id") val pokemonId: Int,
+    @SerializedName ("height") val pokemonHeight: Int,
+    @SerializedName ("weight") val pokemonWeight: Int,
     @SerializedName ("sprites") val pokemonSprites: PokemonImageResponse,
     @SerializedName ("name") val pokemonName: String,
-    @SerializedName ("stats") val pokemonStats: List<PokemonStatsResponse>
+    @SerializedName ("stats") val pokemonStats: List<PokemonStatsResponse>,
+    @SerializedName ("types") val pokemonTypes: List<PokemonTypesDataResponse>
 )
 
 data class PokemonImageResponse (
@@ -24,3 +28,11 @@ data class PokemonImageResponse (
 data class PokemonStatsResponse (
     @SerializedName ("base_stat") val pokemonStatValue: Int
         )
+
+data class PokemonTypesDataResponse(
+    @SerializedName ("type") val Type: TypeNameResponse
+)
+
+data class TypeNameResponse(
+    @SerializedName ("name") val typeName: String
+)

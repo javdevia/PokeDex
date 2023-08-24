@@ -32,24 +32,66 @@
         app:layout_constraintTop_toBottomOf="@id/tvPokemonName" />
 
     <TextView
+        android:id="@+id/tvPokemonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPokemonDetail"
+        tools:text="ID: 150" />
+
+    <LinearLayout
+        android:id="@+id/LayoutDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPokemonId">
+
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="Weight: 50" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="Height: 50" />
+
+
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/tvStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="8dp"
-        android:textSize="20sp"
         android:text="Base Stats"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPokemonDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/LayoutDetail" />
 
     <!-- Valor numerico de los stats -->
     <LinearLayout
         android:id="@+id/LayoutStatsValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStats">
@@ -152,7 +194,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/black"
             android:textAllCaps="true"
-            app:cardCornerRadius="16dp" >
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvAttack"
@@ -173,7 +215,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/black"
             android:textAllCaps="true"
-            app:cardCornerRadius="16dp" >
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvDefense"
@@ -194,7 +236,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/black"
             android:textAllCaps="true"
-            app:cardCornerRadius="16dp" >
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpecialAttack"
@@ -215,7 +257,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/black"
             android:textAllCaps="true"
-            app:cardCornerRadius="16dp" >
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpecialDefense"
@@ -236,7 +278,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/black"
             android:textAllCaps="true"
-            app:cardCornerRadius="16dp" >
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvSpeed"
@@ -257,8 +299,8 @@
         android:id="@+id/LayoutStatsTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:layout_marginVertical="8dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
