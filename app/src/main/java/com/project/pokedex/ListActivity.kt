@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.pokedex.API.ApiServiceManager
 import com.project.pokedex.databinding.ActivityListBinding
@@ -33,7 +34,7 @@ class ListActivity : AppCompatActivity() {
         // Inicialización de RecyclerView
         adapter = PokemonListAdapter { navigateToDetail(it) }
         binding.rvPokemonList.setHasFixedSize(true)
-        binding.rvPokemonList.layoutManager = LinearLayoutManager(this)
+        binding.rvPokemonList.layoutManager = GridLayoutManager(this,3)
         binding.rvPokemonList.adapter = adapter
 
     }
