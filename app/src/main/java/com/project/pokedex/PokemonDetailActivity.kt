@@ -79,8 +79,8 @@ class PokemonDetailActivity : AppCompatActivity() {
         updateHeight(binding.cvHp, stats[0])
         updateHeight(binding.cvAttack, stats[1])
         updateHeight(binding.cvDefense, stats[2])
-        updateHeight(binding.cvSpecialDefense, stats[3])
-        updateHeight(binding.cvSpecialAttack, stats[4])
+        updateHeight(binding.cvSpecialAttack, stats[3])
+        updateHeight(binding.cvSpecialDefense, stats[4])
         updateHeight(binding.cvSpeed, stats[5])
     }
 

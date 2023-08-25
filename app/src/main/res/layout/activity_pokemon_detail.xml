@@ -180,9 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green" />
 
         </androidx.cardview.widget.CardView>
 
@@ -201,9 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green" />
 
         </androidx.cardview.widget.CardView>
 
@@ -222,9 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -243,9 +237,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -264,9 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -285,9 +275,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="bottom"
-                android:layout_margin="1dp"
-                android:backgroundTint="@color/green"
-                app:cardCornerRadius="16dp" />
+                android:backgroundTint="@color/green"/>
 
         </androidx.cardview.widget.CardView>
 
