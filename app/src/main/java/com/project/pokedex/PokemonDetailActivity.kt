@@ -40,9 +40,9 @@ class PokemonDetailActivity : AppCompatActivity() {
                 runOnUiThread {
                     binding.tvPokemonName.text = response.pokemonName
                     binding.ivPokemonDetail.load(response.pokemonSprites.pokemonImageUrl)
-                    binding.tvPokemonId.text = "ID: ${response.pokemonId}"
-                    binding.tvWeight.text = "Weight: ${response.pokemonWeight}"
-                    binding.tvHeight.text = "Height: ${response.pokemonHeight}"
+                    binding.tvPokemonId.text = "#${response.pokemonId}"
+                    binding.tvWeight.text = "Weight: ${response.pokemonWeight}lb"
+                    binding.tvHeight.text = "Height: ${response.pokemonHeight}ft"
                     binding.progressBar.isVisible = false
 
 
