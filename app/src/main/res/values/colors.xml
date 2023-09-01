@@ -4,11 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#1AFB47</color>
 
-    <color name="congo_brown">#573d3e</color>
-    <color name="russett">#7d595b</color>
-    <color name="pharlap">#a57e7f</color>
-    <color name="thatch">#c5a5a5</color>
-    <color name="bizarre">#ead7d8</color>
+    <color name="pokedex_primary">#292d33</color>
+    <color name="pokedex_secondary">#5c6570</color>
+    <color name="pokedex_tertiary">#9ba2b0</color>
+    <color name="pokedex_secondary_container">#c0c6d3</color>
+    <color name="pokedex_primary_container">#f2f4f8</color>
     #573d3e
 
 </resources>
